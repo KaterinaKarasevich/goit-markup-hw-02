@@ -1,10 +1,12 @@
 :root {
     --primary-text-color:#757575;
     --title-text-color:#212121;
-    --accent-color:#2196F3;
+    --accent-color-blue:#2196F3;
     --primary-bg-color:#E5E5E5;
-    --secondary-write-color:#FFFFFF;
-
+    --primary-write-color:#FFFFFF;
+    --accent-color-red:red;
+    --footer-text-color:rgba(255, 255, 255, 0.6)
+    --button-bg-color: #F5F4FA;
 
 }
 
@@ -21,30 +23,51 @@ ul {
 a {
     text-decoration: none;
 }
+/*Header-begin*/
 /*Site nav*/
 .logo {
-    color: var(--accent-color);
-}
-/*не работает наведение курсора*/
-.logo:hover {
-    color: red;
+    color: var(--accent-color-blue);
 }
 
+.logo:hover {
+    color: var(--accent-color-red);
+}
+.logo .color {
+    color: var(--title-text-color)
+}
 .site-nav .link {
     color: var(--title-text-color);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
-    color: red;
+    color: var(--accent-color-red);
 }
-/*Добавить новую странцу!!!!!!*/
+
 .site-nav .link.current {
-    color: var(--accent-color);
+    color: var(--accent-color-blue);
  
 }
 
-.title {
-    color: var(--secondary-write-color);
+.mail-header {
+    color: var(--accent-color-blue);
+}
+.mail-header:hover,
+.mail-header:focus {
+    color: var(--accent-color-red);
+}
+
+.tel-header {
+    color: var(--primary-text-color);
+}
+.tel-header:hover,
+.tel-header:focus {
+    color: var(--accent-color-red);
+}
+
+/*Header-end*/
+/*Main*/
+.hero-title {
+    color: var(--primary-write-color);
 }
 
 .section-title {
@@ -59,13 +82,52 @@ a {
     color: var(--title-text-color);
     
 }
-
+.portfolio-list .title {
+    color: var(--title-text-color);
+}
 /*button*/
-.button {
-    color: var(--secondary-write-color);
-    background-color: var(--accent-color);
+
+
+.button.primary {
+    color: var(--primary-write-color);
+    background-color: var(--accent-color-blue);
 
 }
+.button.secondary {
+    color: var(--title-text-color);
+    background-color: var(--button-bg-color);
+
+}
+.button:hover,
+.button:focus {
+    color: var(--accent-color-red);
+}
+
+/*Футер*/
+.address {
+    color: var(--primary-write-color);
+}
+.address:hover,
+.address:focus {
+    color: var(--accent-color-red);
+}
+
+.mail-footer,
+.tel-footer {
+    color: var(--footer-text-color);
+}
+
+.mail-footer:hover,
+.mail-footer:focus {
+    color: var(--accent-color-red);
+}
+.tel-footer:hover,
+.tel-footer:focus {
+    color: var(--accent-color-red);
+}
+
+
+
 /*вторичный цвет текста background: #212121;*/
 /*цвет основного текста background: #757575;*/
 /*цвет текста заголовка h1 и кнопки background: #FFFFFF;*/
