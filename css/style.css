@@ -1,3 +1,13 @@
+/*html {                                
+    box-sizing: border-box;
+}
+*,
+*::before;
+*::after; {
+    box-sizing: inherit;
+}*/
+
+
 :root {
     --primary-text-color:#757575;
     --title-text-color:#212121;
@@ -6,13 +16,12 @@
     --secondary-bg-color: #2F303A;
     --primary-write-color: #FFFFFF;
     --accent-color-red:red;
-    --footer-text-color:rgba(255, 255, 255, 0.6)
+    --footer-text-color:rgba(255, 255, 255, 0.6);
     --button-bg-color: #F5F4FA;
-
 }
 
-
 body {
+    margin: 0;
     background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
 
@@ -21,7 +30,13 @@ body {
     line-height: 1.14;
     letter-spacing: 0.03em;
 }
+/*.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
 
+}*/
 ul {
     list-style: none;
 }
@@ -47,7 +62,7 @@ a {
 }
 
 .logo:hover {
-    color: var(--accent-color-red);
+    color: var(--accent-color-blue);
 }
 
 .site-nav .link {
@@ -58,7 +73,7 @@ a {
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
-    color: var(--accent-color-red);
+    color: var(--accent-color-blue);;
 }
 
 .site-nav .link.current {
@@ -66,26 +81,21 @@ a {
  
 }
 
-.mail-header {
-    color: var(--accent-color-blue);
-
-    font-weight: 500;
-    letter-spacing: 0.02em;
-}
-.mail-header:hover,
-.mail-header:focus {
-    color: var(--accent-color-red);
-}
-
+.mail-header,
 .tel-header {
     color: var(--primary-text-color);
 
     font-weight: 500;
     letter-spacing: 0.02em;
 }
+.mail-header:hover,
+.mail-header:focus {
+    color: var(--accent-color-blue);
+}
+
 .tel-header:hover,
 .tel-header:focus {
-    color: var(--accent-color-red);
+    color: var(--accent-color-blue);
 }
 
 /*Header-end*/
@@ -108,6 +118,7 @@ a {
 .section-title {
     color: var(--title-text-color);
 
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
@@ -116,6 +127,8 @@ a {
 .features-list .title {
     color: var(--title-text-color);
 
+    font-weight: 700;
+    font-size: 14px;
     text-transform: uppercase;
 }
 .features-list .text {
@@ -125,6 +138,7 @@ a {
 .emploees-list .title {
     color: var(--title-text-color);
 
+    font-weight: 700;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -139,6 +153,7 @@ a {
 .portfolio-list .title {
     color: var(--title-text-color);
 
+    font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -149,39 +164,27 @@ a {
 }
 /*button*/ 
 .button {
-    font-family: inherit;
-    cursor: pointer;
-}
-.button.hero {
-    color: var(--primary-write-color);
-    background-color: var(--accent-color-blue);
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-
-}
-
-.button.primary {
-    color: var(--primary-write-color);
-    background-color: var(--accent-color-blue);
-
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
- }
-.button.secondary {
     color: var(--title-text-color);
     background-color: var(--button-bg-color);
 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
-  }
+    font-family: inherit;
+    cursor: pointer;
+
+}
+.button.hero {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
 .button:hover,
 .button:focus {
-    color: var(--accent-color-red);
+    color: var(--primary-write-color);
+    background-color: var(--accent-color-blue);
 }
 
 /*Футер*/
@@ -199,7 +202,7 @@ footer {
 }
 .address .coordinatesess:hover,
 .address .coordinatesess:focus {
-    color: var(--accent-color-red);
+    color: var(--accent-color-blue);
 }
 
 .address .mail-footer,
@@ -208,12 +211,12 @@ footer {
 }
 .address .mail-footer:hover,
 .address .mail-footer:focus {
-    color: var(--accent-color-red);
+    color: var(--accent-color-blue);
 }
 
 .address .tel-footer:hover,
 .address .tel-footer:focus {
-    color: var(--accent-color-red);
+    color: var(--accent-color-blue);
 }
 
 /*вторичный цвет текста background: #212121;*/
